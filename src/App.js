@@ -3,15 +3,23 @@ import './App.css';
 import { Component } from 'react';
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            name: 'Gustavo Queiroz'
-        };
+    state = {
+        name: 'Gustavo Queiroz',
+        counter: 0
+    };
+
+    handlePClick = () => {
+        this.setState({ name: 'Junior' });
+    }
+
+    handleAClick = (event) => {
+        event.preventDefault();
+        const { counter } = this.state;
+        this.setState({ counter: counter + 1 });
     }
 
     render() {
-        const name = this.state.nome;
+        const { name, counter } = this.state;
 
         return ( <
             div className = "App" >
@@ -22,9 +30,10 @@ class App extends Component {
             className = "App-logo"
             alt = "logo" / >
             <
-            p > { name } <
+            p onClick = { this.handlePClick } > { name } { counter } <
             /p> <
-            a className = "App-link"
+            a onClick = { this.handleAClick }
+            className = "App-link"
             href = "https://reactjs.org"
             target = "_blank"
             rel = "noopener noreferrer" >
