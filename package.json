@@ -36,6 +36,7 @@
     ]
   },
   "devDependencies": {
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.5",
     "msw": "^0.35.0"
   }
 }

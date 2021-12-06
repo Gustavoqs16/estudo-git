@@ -13,10 +13,11 @@ exports[`<PostCard /> should match snapshot PostCard 1`] = `
   >
     <h2>
       title 1
+       
+      1
     </h2>
     <p>
       body 1
-      Oi
     </p>
   </div>
 </div>
